@@ -1,0 +1,16 @@
+int number,firstdig,lastdig;
+        Scanner sc=new Scanner(System.in);
+        number=sc.nextInt();
+
+        //last digit by % operator
+        lastdig=number%10;
+
+        firstdig=number;
+        while(firstdig>=10){
+            firstdig=firstdig/10;
+        }
+        int sum=firstdig+lastdig;
+        System.out.println("first digit :"+firstdig);
+        System.out.println("last digit :"+lastdig);
+    }
+}
