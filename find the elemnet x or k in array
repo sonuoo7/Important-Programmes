@@ -1,0 +1,21 @@
+//find the elemnet x or k in array
+
+        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the size of the array :");
+        int size = sc.nextInt();
+        int num[] = new int[size];
+        //input
+        int i;
+        for (i = 0; i <size; i++) { //this  is important
+//            System.out.println("Enter the elements of array :");
+            num[i] = sc.nextInt();
+        }
+        int x=sc.nextInt();
+        //output
+        for (i=0;i<num.length;i++){
+            if (num[i]==x){
+                System.out.println("X is found at the index :" +i);
+            }
+//            System.out.println("the elements are :");
+//            System.out.println(num[i])
+        }
