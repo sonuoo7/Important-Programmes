@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class sumofrowsandcols {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int arr[][] = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        // output
+        System.out.println("print the 2D array");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        // sum of elements rows and columns
+        int sum=0;//declear here while sum of all elements in 2D array 
+        for (int i = 0; i < n; i++) {
+            //int sum = 0;//sum is declear here while print sum rows or columns
+            for (int j = 0; j < m; j++) {
+                //sum = sum + arr[i][j];    //for sum by rows
+                sum+=arr[j][i];          //for sum by columnw 
+                
+            
+            }
+            //System.out.println("print by columns :"+sum);
+            // System.out.println("print by rows :"+sum);
+}
+        System.out.println("sum of 2D array :"+sum);
+        
+    }
+}
