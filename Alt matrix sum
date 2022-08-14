@@ -1,0 +1,42 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+      Scanner sc=new Scanner (System.in);
+		 int  n = sc.nextInt();
+     int blks=0, whts=0, sum;
+      int arr[][] = new int[n][n];
+
+      for(int i = 0; i<n; i++)
+        {
+          for(int j = 0; j<n; j++)
+          {
+          arr[i][j] = sc.nextInt();
+        }
+        }
+
+      
+         for(int i = 0; i<n; i++)
+        {
+          for(int j = 0; j<n; j++)
+          {
+     sum =i+j;
+            if(sum%2==0)
+            {
+               blks+=arr[i][j];
+            }
+
+            else 
+             whts+=arr[i][j];
+         
+        }
+        }
+      
+System.out.println(blks);
+      System.out.println(whts);
+    }
+}
