@@ -1,0 +1,55 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+        public static void main (String[] args) throws java.lang.Exception
+        {
+                //your code here
+     Scanner sc = new Scanner(System.in);
+     int n = sc.nextInt();
+     String anskey = sc.next();
+     String adrianans = "";
+     // int n = 100;
+     for(int i=0;i<33;i++){
+       adrianans+="ABC";
+     }
+     adrianans+="A";
+     String brunoans = "";
+     for(int i=0;i<25;i++){
+       brunoans+="BABC";
+     }
+     String goranans = "";
+     for(int i=0;i<16;i++){
+       goranans+="CCAABB";
+     }
+     goranans+="CCAA";
+     int a = 0;
+     int b = 0;
+     int g = 0;
+     for(int i=0;i<anskey.length();i++)
+     {
+       if(adrianans.charAt(i)==anskey.charAt(i)){
+         a++;
+       }
+       if(brunoans.charAt(i)==anskey.charAt(i)){
+         b++;
+       }
+       if(goranans.charAt(i)==anskey.charAt(i)){
+         g++;
+       }
+     }
+     int ans = Math.max(Math.max(a,b),g);
+     System.out.println(ans);
+     if(a==ans){
+       System.out.println("Adrian");
+     }
+     if(b==ans){
+       System.out.println("Bruno");
+     }
+     if(g==ans){
+       System.out.println("Goran");
+     }
+        }
+}
