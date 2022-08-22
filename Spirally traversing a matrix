@@ -1,0 +1,48 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	Scanner scn=new Scanner(System.in);
+      int r=scn.nextInt();
+       int c=scn.nextInt();
+       int arr[][]=new int[r][c];
+        for(int i=0;i<r;i++){
+        	for(int j=0;j<c;j++){
+        		arr[i][j]=scn.nextInt();
+        	}
+        }
+      int sr=0, sc=0, er=r-1, ec=c-1;
+      int count=1;
+      
+      while(count <= r*c)
+      {
+      for(int j=sc;j<=ec&&count<=r*c;j++){
+              System.out.print(arr[sr][j]+" ");
+            
+        count++;
+            }
+        sr++;
+        for(int i=sr;i<=er&&count<=r*c;i++){
+          System.out.print(arr[i][ec]+" ");
+        
+        count++;
+        }
+        ec--;
+          for(int j=ec;j>=sc&&count<=r*c;j--){
+              System.out.print(arr[er][j]+" ");
+            count++;
+          }
+            er--;
+       for(int i=er;i>=sr&&count<=r*c;i--){
+          System.out.print(arr[i][sc]+" ");
+        
+            count++;
+	}
+sc++;
+  }
+    }
+}
