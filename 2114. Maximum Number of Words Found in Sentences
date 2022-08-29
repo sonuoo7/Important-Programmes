@@ -1,0 +1,14 @@
+class Solution {
+    public int mostWordsFound(String[] sentences) {
+        int max=0;
+        for (String sentence : sentences){
+            
+            //number of words in a sentence
+            int len =sentence.split(" ").length;
+            
+            //maximum count we know till now vs len we got just now 
+            max=Math.max(max,len);
+        }
+        return max;
+    }
+}
