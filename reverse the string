@@ -11,3 +11,21 @@ public class Exercise37 {
         System.out.print("\n");
     }
 }
+
+second method
+
+import java.util.*;
+public class Main
+{
+    
+	public static void main(String[] args) {
+	   // pallindrom
+		Scanner sc=new Scanner (System.in);
+	       String str=sc.next();
+	       String rev="";
+	       for (int i=str.length()-1;i>=0;i--){
+	           rev=rev+str.charAt(i);//concatination
+	       }
+	    System.out.print(rev);
+	}
+}
