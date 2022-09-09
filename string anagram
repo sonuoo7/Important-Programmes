@@ -1,0 +1,29 @@
+import java.util.Scanner;
+ class practice{
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        //anagram string
+        String str= sc.nextLine();
+        String str2=sc.nextLine();
+        boolean isAnagram=false;
+        for (int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            isAnagram=false;
+            for (int j=0;j<str2.length();j++){
+                if (str2.charAt(j)==ch){
+                    isAnagram=true;
+                    break;
+                }
+            }
+            if (!isAnagram){
+                break;
+            }
+        }
+       if (isAnagram){
+        System.out.println("anagram");
+       }else{
+        System.out.println("not anagram");
+       }
+    }
+}
