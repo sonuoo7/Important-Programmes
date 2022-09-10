@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class printlargervalue {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // input the 3 persons age find the yonunger and older person by using if else
+
+        System.out.println("Enter first person age A ");
+        int A = sc.nextInt();
+
+        System.out.println("Enter second person age B ");
+        int B = sc.nextInt();
+
+        System.out.println("Enter third person age C ");
+        int C = sc.nextInt();
+
+        //output for older person
+
+        if (A > B && A > C) {
+            System.out.println(" A oldest person " + A);
+        } else if (B > A && B > C) {
+            System.out.println("Person B is oldest " + B);
+        } else if (C > A && C > B) {
+            System.out.println("The c oldest " + C);
+        } else {
+            System.out.println("all are same age ");
+            System.exit(0);
+        }
+        //output for younger person
+
+        if (A<B && A<C) {
+            System.out.println("Person A is younger " + A);
+        }
+        else if (B<A && B<C) {
+            System.out.println("B is yonger person " + B);
+        }
+        else if (C<A && C<B) {
+            System.out.println("Person C is younger " + C);
+            sc.close();
+        }
+    }
+}
