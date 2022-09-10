@@ -1,53 +1,68 @@
 import java.util.Scanner;
 
 
-public class loopss {
+
+public class patterns {
     public static void main(String[] args) {
-//        <<---------------------------------------------------------------------->>
-//        Take 10 integers from the keyboard using a loop and print their average value
-//        on the screen.
-        Scanner sc= new Scanner(System.in);
-//
-//        float sum=0;
-//         for (int i=1; i<=10; i++) {
-//         sum += i;
-//         }
-//         System.out.println("sum of avg of natural no is :" +sum + " " +"and the average is :" +sum/10);
+       Scanner sc =new Scanner(System.in);
+       System.out.print("Enter the value of N :");
+       int n=sc.nextInt();
+//        System.out.println("Enter the value of N : ");
+//        int n=sc.nextInt();
+//        System.out.println("Enter the value of M : ");
+//        int m= sc.nextInt();
 
-       <<----------------------------------------------------------------------------------------->>
-//        PRINT  PATTERNES ---------->
-        // quues --> hollow rectangle
-        int n=sc.nextInt();
-        int m=sc.nextInt();
-        for (int i=1; i<=n;i++){
-           //inner loop
-            for (int j=1; j<=m;j++){
-                if (i==1 || j==1 || i==n || j==m) {
-                    System.out.print("*"+" ");
-                }
-                else{
-                        System.out.print("  ");
-                    }
-                }
-            System.out.println();
-//            }
-//        <<-------------------------------------------------------------------------------------------->>
+        //<<------------------------------------------------------------------------->>
 
-        //  ques floyd's triangle 123 -------------
-//        int n = 7;
-//        int number = 1;
-//        for (int i = 1; i <= n; i++) {
+        // rectangular pattern
+        // int n = 5;
+        //int m=5;
+//        for(int i=1; i<=n;i++){
 //            //inner loop
-//            for (int j = 1; j <= i; j++) {
-//                System.out.print(number+" ");
-//                number++;
+//            for (int j=1; j<=m; j++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+
+        //<<-------------------------------------------------------------->>
+
+        //hollow rectangle
+//        for (int i=1; i<=n;i++){
+//            //inner loop
+//            for (int j=1; j<=m;j++){
+//                if (i==1 || j==1 || i==n || j==m) {
+//                    System.out.print("*");
+//                }
+//                else{
+//                        System.out.print(" ");
+//                    }
+//                }
+//            System.out.println();
+//            }
+
+        //<<---------------------------------------------------------------------------->>
+
+        //half pyramid---------
+//        for(int i=1;i<=n;i++){
+//            //inner loop
+//            for (int j=1; j<=i; j++){
+//                System.out.print("*");
 //            }
 //            System.out.println();
 //        }
-//        <<-------------------------------------------------------------------------------------->>
 
+        //<<---------------------------------------------------------->>
+        //inverted pyramid
+//        for(int i =n; i>=1;i--){
+//            //inner loop
+//            for (int j=1; j<=i; j++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+
+        //<<------------------------------------------------->>
         //inverted half pyramid----------------------
-//        int n=5;
 //        for (int i=1; i<=n; i++){
 //            //inner loop
 //            for (int j=1;j<=n-i; j++){
@@ -57,16 +72,56 @@ public class loopss {
 //            for (int j=1; j<=i; j++){
 //                System.out.print("*");
 //            }
-            //System.out.println();
+//            System.out.println();
 //
 //        }
-//        for(int i = 3; i <=4; i++)
-//        {
-//            for(int j=2; j<i; j++)
-//            {
-//                System.out.print("*");
+
+        //<<-------------------------------------------------->>
+        //print half pyramid with number ------------------
+//        for (int i=1; i<=n;i++){
+//            //inner loop
+//            for(int j=1;j<=i;j++){
+//                System.out.print(j+" ");
 //            }
-//            }
+//            System.out.println();
+//        }
+        //<<---------------------------------------------------->>
+        //inverted half pyramid with numbers
+//         for (int i =1; i<n;i++){
+//             //inner loop
+//             for (int j=1; j<=n-i+1;j++) {
+//                 System.out.print(j+" ");
+//             }
+//             System.out.println();
+//         }
+        //<<----------------------------------------------------------->>
+        // floyd's triangle-------------
+//       int number = 1;
+//       for (int i = 1; i <= n; i++) {
+//           //inner loop
+//           for (int j = 1; j <= i; j++) {
+//               System.out.print(number+" ");
+//               number++;
+//           }
+//           System.out.println();
+//       }
+        //<<------------------------------------------------------------->>
+        // 0-1 triangle-------------------------------
+        for(int i =1;i<=n; i++) {
+            //inner loop
+            for (int j = 1; j <= i; j++){
+                int sum = i + j;
+                if (sum % 2 == 0) {
+                    System.out.print("1"+ " ");
+                } else {
+                System.out.print("0"+  " ");
+            }
+            }
+        System.out.println("");
         }
-}
-}
+//        for (int i = 1; i <=10; i++) {
+//            int result = n * i;
+//
+//            System.out.println(result);
+        }
+    }
