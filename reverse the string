@@ -14,18 +14,23 @@ public class Exercise37 {
 
 second method
 
-import java.util.*;
-public class Main
-{
-    
-	public static void main(String[] args) {
-	   // pallindrom
-		Scanner sc=new Scanner (System.in);
-	       String str=sc.next();
-	       String rev="";
-	       for (int i=str.length()-1;i>=0;i--){
-	           rev=rev+str.charAt(i);//concatination
-	       }
-	    System.out.print(rev);
-	}
+//import java.util.Scanner;
+
+public class practice {
+    public static boolean isPallindrom(String str){
+        String rev="";
+        for (int i=str.length()-1;i>=0;i--){
+            rev=rev+str.charAt(i);
+        }
+        if (str.equals(rev)){
+            return true;
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        //bubble sort
+        String str="sonunos";
+        System.out.println(isPallindrom(str));
+
+    }
 }
